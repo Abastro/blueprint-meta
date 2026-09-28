@@ -1,0 +1,39 @@
+\documentclass[runningheads]{llncs}
+
+% ---------------------------------------------------------------- packages ---
+\usepackage{lmodern}          % scalable Type1; microtype expansion needs it
+\usepackage{microtype}
+
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{stmaryrd}                      % \llbracket, \bRrbracket
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage[numbers]{natbib}
+\usepackage{url}
+\usepackage[capitalise,noabbrev]{cleveref}
+
+\input{commands}
+
+\title{Title}
+\author{Author}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+% \tableofcontents
+
+\input{sections/01.Introduction}
+\input{sections/02.Preliminary}
+
+\appendix
+\input{sections/A.Appendix}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
