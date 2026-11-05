@@ -1,0 +1,16 @@
+% Shared preamble for the documents under docs/: packages and setup.
+% Macros live in commands.tex; title and authors stay in each root file.
+
+\usepackage{lmodern}          % scalable Type1; microtype expansion needs it
+\usepackage{microtype}
+
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{stmaryrd}                      % \llbracket, \rrbracket
+% stmaryrd has no bold face; retain its regular symbols in bold contexts.
+\SetSymbolFont{stmry}{bold}{U}{stmry}{m}{n}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{bm}
+\usepackage{url}
+\usepackage[capitalise,noabbrev]{cleveref}

@@ -1,3 +1,4 @@
+# Untracked reference
 references/
 
 # LaTeX build artifacts
@@ -11,3 +12,6 @@ references/
 *.pdf
 *.synctex.gz
 *.toc
+
+# LaTeX output
+docs/*/build/
