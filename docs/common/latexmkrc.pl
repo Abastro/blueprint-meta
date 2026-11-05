@@ -1,18 +1,18 @@
 # Shared latexmk configuration, loaded by each document folder's .latexmkrc.
-# Each folder docs/<name>/ builds <name>.tex into docs/<name>/build/<name>.pdf.
+# It only says how to compile; which documents exist is up to
+# docs/documents.json and the Makefile, which pass the root file explicitly.
+# Output goes to the folder's build/ subfolder.
 use strict;
 use warnings;
-use File::Basename qw(basename);
 use Cwd qw(getcwd);
 
-our ($pdf_mode, $out_dir, @default_files, $bibtex_use, $bibtex_fudge, $clean_ext);
+our ($pdf_mode, $out_dir, $bibtex_use, $bibtex_fudge, $clean_ext);
 
 $pdf_mode = 1;   # pdflatex
 # Applies the same flags to every engine (-pdf, -lualatex, -xelatex).
 set_tex_cmds('-synctex=1 -interaction=nonstopmode -file-line-error %O %S');
 
-$out_dir       = getcwd() . '/build';
-@default_files = (basename(getcwd()) . '.tex');
+$out_dir = getcwd() . '/build';
 
 $bibtex_use = 2;               # `latexmk -c` also removes the .bbl
 # Run bibtex from the document folder, so \bibliography paths resolve
